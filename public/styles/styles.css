@@ -1,0 +1,13 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: crimson;
+}
+
+button {
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}

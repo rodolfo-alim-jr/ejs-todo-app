@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<div>
+    <h1><%= pageTitle %></h1>
+    <% todos.forEach((todo) => { %>
+        <form action="/delete" method="POST">
+            <p><input type="checkbox" name="checkbox" value="<%= todo._id %>" onChange="this.form.submit()" id=""><%= todo.name %></p>
+            <input type="hidden" name="listName" value="<%= pageTitle %>">
+        </form>
+
+    <% }) %>
+    <form action="/" method="POST">
+        <input type="text" name="taskItem">
+        <button type="submit" name="list" value="<%= pageTitle %>">Add Task</button>
+    </form>
+</div>
+
+
+<%- include('partials/footer') %>
